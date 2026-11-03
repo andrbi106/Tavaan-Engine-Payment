@@ -9,7 +9,7 @@ use Tavaan\Core\Contracts\Console\CommandInterface;
 /**
  * payment:list command.
  */
-final class Payment_listCommand implements CommandInterface
+final class PaymentListCommand implements CommandInterface
 {
     public function name(): string
     {
