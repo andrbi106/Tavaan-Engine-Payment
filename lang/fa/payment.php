@@ -1,2 +1,2 @@
 <?php
-return return ['error_payment' => 'خطا در پرداخت.'];;
+return ['error_payment' => 'خطا در پرداخت.'];
