@@ -14,4 +14,27 @@ use Tavaan\Engine\Payment\PaymentResult;
  * Generated from ROADMAP.md scenarios — real implementations, not placeholders.
  */
 final class PaymentScenarioTest extends TestCase
-{'    public function t01_request_returns_payment_result(): void\n    {\n        // Scenario T-01\n$m = new PaymentManager(["default" => "mock"]);\n        $r = $m->request(1000, ["description" => "test"]);\n        $this->assertInstanceOf(PaymentResult::class, $r);\n        $this->assertTrue($r->success);\n    }\n    public function t02_verify_mock_authority(): void\n    {\n        // Scenario T-02\n$m = new PaymentManager();\n        $r = $m->verify("mock_test", 1000);\n        $this->assertTrue($r->success);\n    }\n    public function t03_verify_invalid_authority_fails(): void\n    {\n        // Scenario T-03\n$m = new PaymentManager();\n        $r = $m->verify("invalid", 1000);\n        $this->assertFalse($r->success);\n    }'}
+{
+    public function t01_request_returns_payment_result(): void
+    {
+        // Scenario T-01
+$m = new PaymentManager(["default" => "mock"]);
+        $r = $m->request(1000, ["description" => "test"]);
+        $this->assertInstanceOf(PaymentResult::class, $r);
+        $this->assertTrue($r->success);
+    }
+    public function t02_verify_mock_authority(): void
+    {
+        // Scenario T-02
+$m = new PaymentManager();
+        $r = $m->verify("mock_test", 1000);
+        $this->assertTrue($r->success);
+    }
+    public function t03_verify_invalid_authority_fails(): void
+    {
+        // Scenario T-03
+$m = new PaymentManager();
+        $r = $m->verify("invalid", 1000);
+        $this->assertFalse($r->success);
+    }
+}
