@@ -81,8 +81,8 @@ final class PaymentServiceProvider
     public function provides(): array { return [PaymentManager::class]; }
     public function getManager(): PaymentManager { if ($this->manager === null) $this->register(); return $this->manager; }
 
-    public function inquire()
+    public function inquire(string $authority, int $amount): PaymentResult
     {
-        return null;
+        return $this->getManager()->verify($authority, $amount);
     }
 }
