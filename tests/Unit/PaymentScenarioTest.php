@@ -15,7 +15,7 @@ use Tavaan\Engine\Payment\PaymentResult;
  */
 final class PaymentScenarioTest extends TestCase
 {
-    public function t01_request_returns_payment_result(): void
+    public function test_t01_request_returns_payment_result(): void
     {
         // Scenario T-01
 $m = new PaymentManager(["default" => "mock"]);
@@ -23,14 +23,14 @@ $m = new PaymentManager(["default" => "mock"]);
         $this->assertInstanceOf(PaymentResult::class, $r);
         $this->assertTrue($r->success);
     }
-    public function t02_verify_mock_authority(): void
+    public function test_t02_verify_mock_authority(): void
     {
         // Scenario T-02
 $m = new PaymentManager();
         $r = $m->verify("mock_test", 1000);
         $this->assertTrue($r->success);
     }
-    public function t03_verify_invalid_authority_fails(): void
+    public function test_t03_verify_invalid_authority_fails(): void
     {
         // Scenario T-03
 $m = new PaymentManager();
