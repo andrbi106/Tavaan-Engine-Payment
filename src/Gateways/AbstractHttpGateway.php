@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tavaan\Engine\Payment\Gateways;
 
-use Tavaan\Core\Contracts\Payment\GatewayInterface;
+use Tavaan\Engine\Payment\Contracts\GatewayInterface;
 use Tavaan\Engine\Database\ORM\Support\Money;
 use Tavaan\Engine\HttpClient\Factory;
 use Tavaan\Engine\HttpClient\Response;
