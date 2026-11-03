@@ -80,4 +80,9 @@ final class PaymentServiceProvider
     public function boot(): void {}
     public function provides(): array { return [PaymentManager::class]; }
     public function getManager(): PaymentManager { if ($this->manager === null) $this->register(); return $this->manager; }
+
+    public function inquire(/* ... */): mixed
+    {
+        return null;
+    }
 }
