@@ -11,7 +11,7 @@
     }
   },
   "providers": [
-    "Tavaan\\Engine\\Payment\\PaymentManagerServiceProvider"
+    "Tavaan\\Engine\\Payment\\PaymentServiceProvider"
   ],
   "requires": {
     "php": ">=8.2",
